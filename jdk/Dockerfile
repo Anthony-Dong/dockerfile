@@ -46,6 +46,9 @@ RUN yum install -y gcc \
     libtool \
     make
 
+# Lang and timezone ENV
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
+RUN echo Asia/Shanghai > /etc/timezone  && ln -sf /usr/share/zoneinfo/$(cat /etc/timezone) /etc/localtime
 
 COPY lib/settings.xml ${MAVEN_HOME}/conf/settings.xml
 ENV JAVA_HOME=${OLDPWD}
