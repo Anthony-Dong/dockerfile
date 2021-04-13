@@ -8,6 +8,7 @@ login: ## 登陆docker
 
 centos: ## 构建基础镜像 centos7
 	docker build -t $(AUTHOR)/centos:7 ./centos
+	docker push $(AUTHOR)/centos:7
 
 GOLANG_VERSION := 1.13.5
 golang: ## 构建golang 1.13.5
