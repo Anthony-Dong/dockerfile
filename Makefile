@@ -1,7 +1,7 @@
 .PHONY: centos golang jdk VERSION
 AUTHOR := fanhaodong
 
-all: centos golang jdk ## 构建全部镜像
+all: centos golang jdk ## 构建和推送全部镜像
 
 login: ## 登陆docker
 	docker login
