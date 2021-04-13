@@ -12,9 +12,9 @@ init:
 # docker环境无法进行jmap操作
 # https://www.cnblogs.com/thirteen-yang/p/14452199.html
 docker_run:
-	-docker stop jdk1.8
-	-docker rm jdk1.8
-	docker run --rm -it -d --cap-add=SYS_PTRACE -v $(HOME_DIR)/.m2:/root/.m2 -v $(PROJECT_DIR):/data/project --name jdk1.8 jdk1.8:latest top
+	-docker stop open-jdk1.8
+	-docker rm open-jdk1.8
+	docker run --rm -it --cap-add=SYS_PTRACE -v $(HOME_DIR)/.m2:/root/.m2 -v $(PROJECT_DIR):/data/project --name open-jdk1.8 fanhaodong/open-jdk:1.8.0 /bin/bash
 
 exec:
 	docker exec -it jdk1.8 /bin/bash

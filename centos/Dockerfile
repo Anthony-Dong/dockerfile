@@ -10,7 +10,6 @@ RUN rm -rf /etc/yum.repos.d/*.repo \
 
 ## install 工具(添加工具较为灵活，所以在第三层，防止重复构建Go)
 RUN yum install -y \
-    sudo\
     net-tools \
     git \
     vim \
@@ -23,11 +22,7 @@ RUN yum install -y \
     wget \
     unzip \
     curl \
-    tcpdump \
-    lrzsz \
-    openssh \
-    openssh-clients \
-    openssh-server
+    tcpdump
 
 # install gcc
 RUN yum install -y gcc \
@@ -35,3 +30,5 @@ RUN yum install -y gcc \
     autoconf \
     libtool \
     make
+
+CMD [ "/bin/bash" ]
