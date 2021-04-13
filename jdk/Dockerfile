@@ -3,7 +3,9 @@ FROM fanhaodong/centos:7
 # install java
 ARG OPEN_JDK_VERSOION=1.8.0
 RUN yum install -y java-${OPEN_JDK_VERSOION}-openjdk-devel
-ENV JAVA_HOME=${OLDPWD}
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.282.b08-1.el7_9.x86_64
+ENV CLASSPATH=.:${JAVA_HOME}/jre/lib/rt.jar:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
+ENV PATH=${PATH}:${JAVA_HOME}/bin
 
 # install  mvn
 ARG MVN_VERSOION=3.6.3
