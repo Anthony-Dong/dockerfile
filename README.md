@@ -28,6 +28,9 @@ docker pull fanhaodong/golang:1.13.5
 - qconf: 1.2.1
 - GOPROXY=https://goproxy.cn,direct
 
+## Example
+
+可以参考这个例子使用: [golang](./golang/example)
 ## 3. Open-jdk
 
 ### Quick start
@@ -40,6 +43,10 @@ docker pull fanhaodong/open-jdk:1.8.0
 - base image: `fanhaodong/centos:7`
 - version: 1.8.0
 - mvn: 3.6.3
+
+## Example
+
+可以参考这个例子使用: [jdk](./jdk/example)
 
 ## 4. Help
 
